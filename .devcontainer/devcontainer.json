@@ -1,0 +1,17 @@
+{
+  "name": "Linux XFCE Desktop",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "remoteUser": "desktop",
+  "overrideCommand": false,
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "Linux Desktop (noVNC)",
+      "protocol": "http",
+      "onAutoForward": "notify"
+    }
+  }
+}
